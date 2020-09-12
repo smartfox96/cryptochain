@@ -3,12 +3,12 @@ const cryptoHash = require('./crypto-hash');
 describe('cryptoHash()', () => {
     
     it('generates a SHA-256 output', () => {
-        expect(cryptoHash('foo'))
-            .toEqual('2c26b46b68ffc68ff99b453c1d30413413422d706483bfa0f98a5e886266e7ae');
+        expect(cryptoHash('test'))
+            .toEqual('9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08');
     });
 
     it('produces the same hash with same input arguments in any given order', () => {
         expect(cryptoHash('one', 'two', 'three'))
             .toEqual(cryptoHash('three', 'one', 'two'));
     });
-})
+});
